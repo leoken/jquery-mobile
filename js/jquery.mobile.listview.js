@@ -57,9 +57,9 @@ $.widget( "mobile.listview", $.mobile.widget, {
 	_removeCorners: function( li, which ) {
 		var top = "ui-corner-top ui-corner-tr ui-corner-tl",
 			bot = "ui-corner-bottom ui-corner-br ui-corner-bl";
-		
+
 		li = li.add( li.find( ".ui-btn-inner, .ui-li-link-alt, .ui-li-thumb" ) );
-		
+
 		if ( which === "top" ) {
 			li.removeClass( top );
 		}
@@ -238,7 +238,7 @@ $.widget( "mobile.listview", $.mobile.widget, {
 				theme = list.jqmData( "theme" ) || o.theme,
 				countTheme = list.jqmData( "counttheme" ) || parentList.jqmData( "counttheme" ) || o.countTheme,
 				newPage, anchor;
-			
+
 			//define hasSubPages for use in later removal
 			hasSubPages = true;
 
@@ -261,7 +261,7 @@ $.widget( "mobile.listview", $.mobile.widget, {
 			anchor.attr( "href", "#" + id );
 
 		}).listview();
-		
+
 		//on pagehide, remove any nested pages along with the parent page, as long as they aren't active
 		if( hasSubPages && parentPage.jqmData("page").options.ajaxDomCaching === false ){
 			parentPage
@@ -278,7 +278,6 @@ $.widget( "mobile.listview", $.mobile.widget, {
 						}
 					}
 				});
-			console.log(parentPage.data("events"))	
 		}
 	}
 });
